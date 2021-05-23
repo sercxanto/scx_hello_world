@@ -1,6 +1,6 @@
 '''setup.py'''
 
-from setuptools import setup
+from setuptools import setup, find_packages
 
 
 def parse_requirements_txt(filename):
@@ -24,6 +24,7 @@ setup(
     description='Hello world example',
     author='Georg Lutz',
     python_requires='>3.5.2',
+    packages=find_packages(),
     # We want repeatable installs, therefor use pinned versions in requirements.txt
     # See also https://packaging.python.org/en/latest/requirements.html
     install_requires=PROJECT_REQUIREMENTS,

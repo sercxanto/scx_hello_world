@@ -35,3 +35,13 @@ pip install tox
 pip install tox-pyenv
 ```
 
+## pex
+
+It is also possible to create a bundled pex package with:
+
+```shell
+pip install pex
+tox -e package
+```
+
+The package is available in the folder `./build`.
