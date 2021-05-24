@@ -18,7 +18,7 @@ tox will run tests and lint.
 As tox manages its own virtual environment run **outside** of the virtual environment:
 
 ```shell
-pip install tox
+pipx install tox
 tox
 ```
 
@@ -31,8 +31,8 @@ pyenv install 3.7.10
 pyenv install 3.8.10
 pyenv install 3.9.5
 pyenv local 3.5.10 3.6.13 3.7.10 3.8.10 3.9.5
-pip install tox
-pip install tox-pyenv
+pipx install tox
+pipx inject tox tox-pyenv
 ```
 
 ## pex
@@ -40,7 +40,6 @@ pip install tox-pyenv
 It is also possible to create a bundled pex package with:
 
 ```shell
-pip install pex
 tox -e package
 ```
 
