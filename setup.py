@@ -32,6 +32,6 @@ setup(
         'dev': DEV_REQUIREMENTS
     },
     entry_points={
-        'console_scripts': ['scx-hello-world=scx_hello_world.hello_world_cli:main']
+        'console_scripts': ['scx-hello-world=scx_hello_world.cli:main']
     }
 )

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # vim: set fileencoding=utf-8 :
-""" hello_world_cli.py
+""" cli.py
 
     command line interface"""
 
