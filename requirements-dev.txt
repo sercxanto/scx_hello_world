@@ -1,3 +1,5 @@
 wheel
 # use version 2.4.4 which is distributed with Ubuntu 20.04
 pylint==2.4.4
+# use version 3.4.3 which is distributed with Ubuntu 20.04
+setuptools_scm==3.4.3

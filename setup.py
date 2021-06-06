@@ -19,11 +19,13 @@ DEV_REQUIREMENTS = parse_requirements_txt("requirements-dev.txt")
 
 setup(
     name='scx-hello-world',
-    version='1.0',
+    use_scm_version={
+        'write_to': 'scx_hello_world/_version.py',
+    },
     license='MIT',
     description='Hello world example',
     author='Georg Lutz',
-    python_requires='>3.5.2',
+    python_requires='>=3.6',
     packages=find_packages(),
     # We want repeatable installs, therefor use pinned versions in requirements.txt
     # See also https://packaging.python.org/en/latest/requirements.html
@@ -32,6 +34,8 @@ setup(
         'dev': DEV_REQUIREMENTS
     },
     entry_points={
-        'console_scripts': ['scx-hello-world=scx_hello_world.cli:main']
-    }
+        'console_scripts': [
+            'scx-hello-world=scx_hello_world.cli:main']
+    },
+    setup_requires=['setuptools_scm>=3.4.3'],
 )

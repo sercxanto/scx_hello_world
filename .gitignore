@@ -1,5 +1,7 @@
 /build
+/.eggs
 /.tox
 /.venv
 /*.egg-info
 /.python-version
+/scx_hello_world/_version.py

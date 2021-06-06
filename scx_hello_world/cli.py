@@ -33,6 +33,7 @@ import logging
 
 # Own imports:
 from scx_hello_world import hello_world
+from scx_hello_world import _version
 
 
 def get_args():
@@ -43,6 +44,8 @@ def get_args():
         "-d", "--debug", dest="debuglevel", action="store_const",
         const=logging.DEBUG, default=logging.INFO,
         help="Enables verbose/debug output")
+    parser.add_argument(
+        "--version", action="version", version="%(prog)s {}".format(_version.version))
     return parser.parse_args()
 
 
