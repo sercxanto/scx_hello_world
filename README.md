@@ -51,7 +51,7 @@ A new release is created with help of [bump2version](https://github.com/c4urself
 
 ```shell
 bump2version minor
-git push --tags
+git push && git push --tags
 ```
 
 bump2version increments the version in the files and automatically tags the commit.
