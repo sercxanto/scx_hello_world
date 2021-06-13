@@ -44,3 +44,16 @@ tox -e package
 ```
 
 The package is available in the folder `./build`.
+
+## Release a new version
+
+A new release is created with help of [bump2version](https://github.com/c4urself/bump2version). First decide if it is a major, minor or patch change and then run e.g. the following commands:
+
+```shell
+bump2version minor
+git push --tags
+```
+
+bump2version increments the version in the files and automatically tags the commit.
+
+There must be a "unreleased" section at top of the file `CHANGELOG.md`. `unreleased` is replaced then with the new version.
