@@ -1,7 +1,7 @@
 '''setup.py'''
 
+import os
 from setuptools import setup, find_packages
-
 
 def parse_requirements_txt(filename):
     '''Parses requirements.txt'''
@@ -16,6 +16,10 @@ def parse_requirements_txt(filename):
 PROJECT_REQUIREMENTS = parse_requirements_txt("requirements.txt")
 DEV_REQUIREMENTS = parse_requirements_txt("requirements-dev.txt")
 
+THIS_DIRECTORY = os.path.abspath(os.path.dirname(__file__))
+with open(os.path.join(THIS_DIRECTORY, 'README.md'), encoding='utf-8') as f:
+    LONG_DESCRIPTION = f.read()
+
 
 setup(
     name='scx-hello-world',
@@ -23,7 +27,19 @@ setup(
         'write_to': 'scx_hello_world/_version.py',
     },
     license='MIT',
+    url='https://github.com/sercxanto/scx_hello_world',
+    classifiers=[
+        'Development Status :: 5 - Production/Stable',
+        'Environment :: Console',
+        'Intended Audience :: Developers',
+        'License :: OSI Approved :: MIT License',
+        'Programming Language :: Python',
+        'Topic :: Software Development',
+        'Topic :: Utilities'
+    ],
     description='Hello world example',
+    long_description=LONG_DESCRIPTION,
+    long_description_content_type='text/markdown',
     author='Georg Lutz',
     python_requires='>=3.6',
     packages=find_packages(),
