@@ -1,4 +1,4 @@
-## unreleased
+## 0.3.0
 
 * Allow to run PEX executable on multiple python versions
     * Currently this works for python3.7 through python3.9, but not for python3.6
